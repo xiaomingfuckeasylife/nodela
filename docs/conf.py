@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u'fun-api'
+project = u'Nodela'
 copyright = u'2018, clark'
 author = u'clark'
 
@@ -38,8 +38,7 @@ release = u'0.0.1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-]
+extensions = ['sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -47,8 +46,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -74,7 +73,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -101,7 +100,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'fun-apidoc'
+htmlhelp_basename = 'Nodeladoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -128,7 +127,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'fun-api.tex', u'fun-api Documentation',
+    (master_doc, 'Nodela.tex', u'Nodela Documentation',
      u'clark', 'manual'),
 ]
 
@@ -138,7 +137,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'fun-api', u'fun-api Documentation',
+    (master_doc, 'Nodela', u'Nodela Documentation',
      [author], 1)
 ]
 
@@ -149,8 +148,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'fun-api', u'fun-api Documentation',
-     author, 'fun-api', 'One line description of project.',
+    (master_doc, 'Nodela', u'Nodela Documentation',
+     author, 'Nodela', 'One line description of project.',
      'Miscellaneous'),
 ]
 
