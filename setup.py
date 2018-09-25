@@ -1,2 +1,2 @@
-pip install pip -vV
+pip install pip
 pip install sphinxcontrib-httpdomain
