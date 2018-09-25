@@ -2,7 +2,7 @@ import os
 import shlex
 import subprocess
 import sys
-
+import sphinxcontrib
 from docutils.parsers.rst.directives.admonitions import BaseAdmonition
 from sphinx.util import compat
 
