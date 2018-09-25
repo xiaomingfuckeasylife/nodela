@@ -44,10 +44,35 @@ Create DID
 ---------------
 create a did with the correspond private key.
 
-.. http:example:: curl wget httpie python-requests
+.. http:get:: /api/1/did
+   
+   **Example Request**:
 
-    GET /api/1/did HTTP/1.1
-    Host: localhost
+   .. http:example:: curl wget httpie python-requests
+
+      GET /api/1/address HTTP/1.1
+      Host: localhost:5001
+
+   **Example Response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Content-Type: application/json
+
+      {
+          "our_address": "0x2a65Aca4D5fC5B5C859090a6c34d164135398226"
+      }
+    **Example Response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Content-Type: application/json
+
+      {
+          "our_address": "0x2a65Aca4D5fC5B5C859090a6c34d164135398226"
+      }
 
 Retrive DID
 ---------------
