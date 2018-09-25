@@ -1,0 +1,2 @@
+pip install sphinxcontrib.httpdomain
+pip install sphinxcontrib.httpexample

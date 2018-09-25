@@ -25,8 +25,8 @@ clean:
 
 .PHONY: html
 html:
-	pip install sphinxcontrib.httpdomain
-	pip install sphinxcontrib.httpexample
+	#pip install sphinxcontrib.httpdomain
+	#pip install sphinxcontrib.httpexample
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
