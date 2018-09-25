@@ -49,6 +49,8 @@ templates_path = ['_templates']
 source_suffix = ['.rst', '.md']
 # source_suffix = '.rst'
 
+httpexample_scheme = 'https'
+
 # The master toctree document.
 master_doc = 'index'
 
