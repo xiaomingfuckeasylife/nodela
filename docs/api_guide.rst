@@ -81,6 +81,73 @@ using height to get block contained transactions
         "status": 200
       }
 
+Signing message using private key   
+-----------------------------------------
+
+.. http:post:: /api/1/sign
+
+   **Example request**:
+
+   .. sourcecode:: http
+
+    POST /api/1/sign HTTP/1.1
+    Host: localhost:8090
+    Content-Type: application/json
+
+    {
+        "privateKey":"0D5D7566CA36BC05CFF8E3287C43977DCBB492990EA1822643656D85B3CB0226",
+        "msg":"你好，世界"
+    }
+
+   **Example response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Vary: Accept
+      Content-Type: application/json
+
+      {
+          "result": {
+              "msg": "E4BDA0E5A5BDEFBC8CE4B896E7958C",
+              "pub": "02C3F59F337814C6715BBE684EC525B9A3CFCE55D9DEEC53E1EDDB0B352DBB4A54",
+              "sig": "E6BB279CBD4727B41F2AA8B18E99B3F99DECBB8737D284FFDD408B356C912EE21AD478BCC0ABD65246938F17DDE64258FD8A9684C0649B23AE1318F7B9CEEEC7"
+          },
+          "status": 200
+      }
+
+
+verify message signed by a public address's private key  
+--------------------------------------------------------
+
+.. http:post:: /api/1/verify
+
+   **Example request**:
+
+   .. sourcecode:: http
+
+    POST /api/1/verify HTTP/1.1
+    Host: localhost:8090
+    Content-Type: application/json
+
+    {
+        "msg": "E4BDA0E5A5BDEFBC8CE4B896E7958D",
+        "pub": "02C3F59F337814C6715BBE684EC525B9A3CFCE55D9DEEC53E1EDDB0B352DBB4A54",
+        "sig": "E6BB279CBD4727B41F2AA8B18E99B3F99DECBB8737D284FFDD408B356C912EE21AD478BCC0ABD65246938F17DDE64258FD8A9684C0649B23AE1318F7B9CEEEC7"
+    }
+
+   **Example response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Vary: Accept
+      Content-Type: application/json
+
+      {
+          "result": true,
+          "status": 200
+      }
 
 .. _did-related-api:
 
