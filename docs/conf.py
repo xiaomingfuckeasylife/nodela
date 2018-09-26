@@ -37,6 +37,7 @@ compat.make_admonition = BaseAdmonition
 # ones.
 extensions = [
     'sphinxcontrib.httpdomain',
+    'sphinxcontrib.httpexample',
 ]
 
 
