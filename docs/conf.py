@@ -173,10 +173,12 @@ html_static_path = ['_static']
 html_show_copyright = False
 
 html_context = {
-    "display_github": False, # Add 'Edit on Github' link instead of 'View page source'
+    "display_github": False, 
     "last_updated": True,
     "commit": False,
 }
+
+display_github = False
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
