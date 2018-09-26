@@ -172,6 +172,8 @@ html_static_path = ['_static']
 
 html_show_copyright = False
 
+html_show_sourcelink = False
+
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
