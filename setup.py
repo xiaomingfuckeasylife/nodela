@@ -19,14 +19,13 @@ def readme():
 
 
 setup(
-    name='sphinxcontrib-httpdomain',
-    version='1.7.0',
-    url='https://github.com/sphinx-contrib/httpdomain',
-    download_url='https://pypi.org/project/sphinxcontrib-httpdomain/',
+    name='nodela',
+    version='0.0.1',
+    url='https://github.com/xiaomingfuckeasylife/nodela',
     license='BSD',
     author='Hong Minhee',
-    author_email='\x68\x6f\x6e\x67.minhee' '@' '\x67\x6d\x61\x69\x6c.com',
-    description='Sphinx domain for documenting HTTP APIs',
+    author_email='huangxiaoming@elastos.org',
+    description='elastos blockchain entry port',
     long_description=readme(),
     zip_safe=False,
     classifiers=[
