@@ -37,7 +37,6 @@ compat.make_admonition = BaseAdmonition
 # ones.
 extensions = [
     'sphinxcontrib.httpdomain',
-    'sphinxcontrib.httpexample',
 ]
 
 
@@ -280,8 +279,6 @@ latex_documents = [
     ('index', 'sphinxcontrib-httpdomain.tex',
    u'sphinxcontrib-httpdomain Documentation',
    u'Hong Minhee', 'manual'),
-    (master_doc, 'sphinxcontrib-httpexample.tex', u'sphinxcontrib-httpexample Documentation',
-     u'Asko Soukka', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
