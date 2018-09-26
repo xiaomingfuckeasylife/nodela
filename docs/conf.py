@@ -28,21 +28,6 @@ compat.make_admonition = BaseAdmonition
 
 # -- General configuration ------------------------------------------------
 
-if os.environ.get('READTHEDOCS'):
-    print()
-    print('CWD:', os.getcwd())
-    print('Configuration path:', os.path.abspath(__file__))
-    print('Environment variables:')
-    for key in sorted(os.environ):
-        print('  {0}={1}'.format(key, os.environ[key]))
-    print()
-
-sys.path.insert(
-    0,
-    os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-)
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))    
-
 # If your documentation needs a minimal Sphinx version, state it here.
 #
 # needs_sphinx = '1.0'
