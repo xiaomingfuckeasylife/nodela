@@ -82,6 +82,38 @@ tells you the current block height of the network
    :statuscode 404:   not found request
    :statuscode 500:   internal error
    :statuscode 10001: process error
+
+get the balance of address
+-----------------------------------------
+get the balance of the provided public address
+
+.. http:get:: /api/1/balance/(string:`public_address`)
+
+   **Example request**:
+
+   .. sourcecode:: http
+
+    GET /api/1/balance/EbunxcqXie6UExs5SXDbFZxr788iGGvAs9 HTTP/1.1
+    Host: localhost
+
+   **Example response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Vary: Accept
+      Content-Type: application/json
+
+      {
+          "result":"2.11059400",
+          "status":200
+      }
+
+   :statuscode 200:   no error
+   :statuscode 400:   bad request
+   :statuscode 404:   not found request
+   :statuscode 500:   internal error
+   :statuscode 10001: process error   
    
 Get the transactions of specific height   
 -----------------------------------------
@@ -268,6 +300,43 @@ send raw transaction
 
       {
           "result": "1f4432635bcf8c347f2bc20b7906c8c6c195f51beb3426e5f8d6a9e4cc073cf3",
+          "status": 200
+      }
+
+transfer ELA using private key 
+-----------------------------------------
+using private key to send transaction 
+
+.. http:post:: /api/1/transfer
+
+   **Example request**:
+
+   .. sourcecode:: http
+
+    POST /api/1/transfer HTTP/1.1
+    Host: localhost
+
+      {
+          "senderAddr":"EbunxcqXie6UExs5SXDbFZxr788iGGvAs9",
+          "senderPrivateKey":"FABB669B7D2FF2BEBBED1C3F1C9A9519C48993D1FC9D89DCB4C7CA14BDB8C99F",
+          "memo":"测试",
+          "receiver":[
+              {
+                  "address":"EbxU18T3M9ufnrkRY7NLt6sKyckDW4VAsA",
+                  "amount":"0.1"
+              }
+          ]
+      }
+    
+   **Example response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Content-Type: application/json
+
+      {
+          "result": "7bcb5fbf7d6e8f673d50999709d695030dbd6d60a00281221540498cf2830f59",
           "status": 200
       }
 
