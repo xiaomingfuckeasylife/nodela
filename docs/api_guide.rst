@@ -333,3 +333,69 @@ using private key to retrive did .
       }
     
 
+Set DID information 
+----------------------
+setting information into did. using did related privateKey .
+
+.. http:post:: /api/1/setDidInfo
+   
+   **Example Request**:
+
+   .. sourcecode:: http
+
+      POST /api/1/setDidInfo HTTP/1.1
+      Host: localhost
+
+        {
+            "privateKey":"FABB669B7D2FF2BEBBED1C3F1C9A9519C48993D1FC9D89DCB4C7CA14BDB8C99F",
+            "info":{
+                "name":"clark"
+            }
+        }
+
+   **Example Response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Content-Type: application/json
+
+      {
+          "result": "1170c18870d2547207b85bd9859dc97886ca8f570399da0bcfb40a0bdc2a1b20",
+          "status": 200
+      }
+
+Get DID information 
+----------------------
+get value from did using transaction hash and `key` 
+
+.. http:post:: /api/1/getDidInfo
+   
+   **Example Request**:
+
+   .. sourcecode:: http
+
+      POST /api/1/getDidInfo HTTP/1.1
+      Host: localhost
+
+        {
+            "txIds":[
+                "1170C18870D2547207B85BD9859DC97886CA8F570399DA0BCFB40A0BDC2A1B20"
+            ],
+            "key":"name"
+        }
+
+   **Example Response**:
+
+   .. sourcecode:: http
+
+      HTTP/1.1 200 OK
+      Content-Type: application/json
+
+      {
+          "result": "clark",
+          "status": 200
+      }
+
+
+
